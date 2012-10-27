@@ -1,0 +1,13 @@
+<%= link_to "Add Bike", new_bike_url %>
+
+<ul>
+<% @bikes.each do |bike| %>
+	<li>
+	<%= link_to image_tag(bike.url, :width=>"200"), bike_url(bike.id) %> 
+	</br>
+	<%= bike.title %>
+	<%= link_to "Delete", bike_url(bike.id), :method=>"delete" %>
+	<%= link_to "Edit", edit_bike_url(bike.id) %>
+	</li>
+<% end %> 
+</ul>

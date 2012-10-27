@@ -1,0 +1,7 @@
+<h3><%= @bike.title %></h3>
+<nav>
+	<%= link_to "Edit", edit_bike_url(@bike.id) %>
+	<%= link_to "Delete", bike_url(@bike.id), :method=>"delete" %>
+</nav>
+<%= link_to "Back", bikes_url %>
+<%= image_tag(@bike.url) %>

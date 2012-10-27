@@ -1,0 +1,10 @@
+<%= form_for(@bike) do |bike| %>
+	<%= bike.label :url, "Image URL:" %>
+	<%= bike.text_field :url, :size=>100 %>
+
+	<%= bike.label :title, "Title:" %>
+	<%= bike.text_field :title, :size=>100 %>
+
+	<%= bike.submit %>
+	<%= link_to "Home Page", bikes_url %>
+<% end %>
